@@ -12,10 +12,11 @@
 #header-inner{min-height: 300px;}
 #search-inner{min-height: 100px;}
 
-/* Custom CSS (http://www.garrettboatman.com/) */
+/* Custom CSS (http://www.garrettboatman.com/) *
+* Added work by Jjkae * /
 
 .advanced-info{
-	color: #989898 !important;
+	color: #34485d !important;
 }
 
 .info{position: absolute;
@@ -31,7 +32,7 @@
 }
 
 .line-break{
-	border-top: 1px solid #ccc;
+	border-top: 1px solid #34485d;
 	margin: 40px 0px;
 }
 
@@ -44,7 +45,7 @@ textarea.script-insert{
 	padding: 10px;
 	margin: 10px 0px;
 	width: 100%;
-	border: 1px solid #ddd;
+	border: 1px solid #ccc;
 	-webkit-border-radius: 10px;
 -moz-border-radius: 10px;
 border-radius: 10px;
@@ -70,7 +71,7 @@ border-radius: 10px;
 
 .info:hover{
 	opacity: .5;
-	color: #fff;
+	color: #30446B;
 }
 
 .profileinfo{
@@ -88,19 +89,19 @@ border-radius: 10px;
 	right: -9px !important;
 	margin-top: -11px;
 	border-right-width: 0 !important;
-	border-left-color: #fff !important;
+	border-left-color: #30446B !important;
 }
 
 
 .popover.left .arrow:after{
-	border-left-color: #f7f7f7 !important;
+	border-left-color: #212C3B !important;
 }
 
 /* General */
 
 html, body{
 	font-family: 'Futura-Light';
-	color: #989898;
+	color: #34485d;
 	font-size: 20px;
 	font-weight: normal;
 }
@@ -263,11 +264,11 @@ label.ie{
 
 input.range{
 	width: 120px;
-	border: 1px solid #ddd;
+	border: 1px solid #ccc;
 	font-size: 16px;
 	font-family: 'Futura-Light';
 	padding: 8px 8px 5px;
-	color: #989898;
+	color: #34485d;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
@@ -1734,7 +1735,7 @@ a:focus {
   margin-bottom: 0;
   text-align: right;
   background-color: #f5f5f5;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #ccc;
   -webkit-border-radius: 0 0 6px 6px;
   -moz-border-radius: 0 0 6px 6px;
   border-radius: 0 0 6px 6px;
@@ -1990,7 +1991,7 @@ button.close {
 }
  
  #header-inner{
-	 background-image: url('../img/site-title-mobile.png');
+	 background-image: url('../img/site-title-mobile2.png');
 	 background-size: 1500px;
 	 min-height: 210px;
 	 
