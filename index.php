@@ -1,6 +1,8 @@
 <?php
+
 require "php/functions.php"; 
 session_start();
+
 ?>
 
 <?php require "header.php"; ?>
@@ -82,13 +84,15 @@ session_start();
 				<div class="container">
 					<div class="row-fluid">
 						<div class="span12">
-				&copy; 2013  <a href='http://www.ccs.neu.edu/home/812chuc/'>Christopher Chu</a> & <a href="http://www.garrettboatman.com">Garrett Boatman</a> | All videos owned by <a href="">CollegeHumor.com</a>
+				&copy; 2019 Ben Donnell, based on <a href='http://scripts.jakeandamir.com/'>scripts.jakeandamir.com</a> | All videos owned by <a href="http://headgum.com">HeadGum.com</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<a class="info" data-original-title="Oh sheesh, y'all!" data-toggle="popover" data-html="true" data-placement="left" data-content="This site was developed by die hard J&A fans <a href='http://www.ccs.neu.edu/home/812chuc/'>Christopher Chu</a> and <a href='http://www.garrettboatman.com'>Garrett Boatman</a>.<br><br> Huge thanks to Amir and <a href='http://www.reddit.com/r/jakeandamir'>/r/JakeandAmir</a> for helping make this come together!<br> <br>See some issues or have some feedback? <br> <a href='mailto:hello@garrettboatman.com?subject=JakeandAmir Episode Archive'>Let us know!</a>" title=""> <span class="profileinfo"></span></a>
+		<<a class="info" data-original-title="Oh sheesh, y'all!" data-toggle="popover" data-html="true" data-placement="left" data-content="The Jake & Amir script archive was originally developed by J&A fans <a href='http://www.ccs.neu.edu/home/812chuc/'>Christopher Chu</a> and <a href='http://www.garrettboatman.com'>Garrett Boatman</a>. <br> <br>I have replicated the site to archive the HeadGum scripts instead. <br> <br>See some issues or have some feedback or suggestions? <br> <a href='mailto:ben@infinitejest.x10host.com?subject=HeadGum Episode Archive'>Let me know!</a>" title="">
+        <span class="profileinfo"></span>
+        </a>
 		
 		<!-- "Fork us on Git" -->
 		<!-- <a href='https://github.com/garrettboatman/ForTheWolf/'><img src='img/GitHub_Logo.png'></a> -->
@@ -114,3 +118,4 @@ session_start();
 		<?php } } ?>
 	</script>
 </html>
+

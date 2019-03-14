@@ -18,8 +18,9 @@
 							// Create connection
 							
 							include __DIR__ . '/tools/dbConfig.php';
-							
+
 							$con=mysqli_connect($hostName, $userName, $password, $database);
+
 							// Check connection
 							if (mysqli_connect_errno($con))
 							{
@@ -110,6 +111,7 @@
 									} else {
 										$titleQuery = $titleQuery . "))"; 
 									}
+
 									if(!empty($toDate) && !empty($fromDate)) {
                     					$dateQuery = " AND (air_date <='". $toDate ."' AND air_date >= '" . $fromDate . "')";
                   					}
@@ -186,7 +188,7 @@
 								$duration = $row{'duration'};
 								$air_date = $row{'air_date'};
 								$scribe = $row{'scribe'};
-								$iframe = $row{'embed_src'};
+								$iframe = $row{'link2'};
 								//continued below		
 						?>
 						
@@ -247,9 +249,9 @@
 											<tr>
 												<td><span class="icon-share"></span></td>
 												<td>
-													<a target="_blank" class="button b-facebook" href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]=<?php echo $singleEpisodeUrl; ?>&p[title]=Jake and Amir: <?php echo $title; ?>&p[summary]=">
+													<a target="_blank" class="button b-facebook" href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]=<?php echo $singleEpisodeUrl; ?>&p[title]=<?php echo $title; ?>&p[summary]=">
 														Facebook
-													</a><a target="_blank" class="button b-twitter" href="http://twitter.com/home?status=@JakeAndAmir: <?php echo $title; ?> <?php echo $singleEpisodeUrl; ?>">
+													</a><a target="_blank" class="button b-twitter" href="http://twitter.com/home?status= <?php echo $title; ?> <?php echo $singleEpisodeUrl; ?>">
 														Twitter
 													</a>
 												</td>
