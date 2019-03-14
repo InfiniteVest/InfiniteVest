@@ -1,2 +1,2 @@
 # InfiniteVest
-Tentative project to create a Headgum script archive.
+A project to create a Headgum script archive.
