@@ -1,5 +1,9 @@
 <?php
-			include "dbConfig.php";
+    $host = 'localhost';
+    $dbname = 'classicmodels';
+    $username = 'root';
+    $password = 'homeclerk';
+
 			$con=mysqli_connect($hostName, $userName, $password, $database);
 			
 			if (mysqli_connect_errno($con))	{
