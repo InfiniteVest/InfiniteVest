@@ -1,5 +1,5 @@
 <?php
-$hostname = "localhost";
-$userName = "infin256_search";
-$password = "root";
-$database = "infin256_localhost";
+$hostname = "remotemysql.com";
+$userName = "zHZ3KKAmaN";
+$password = "wOXRBGiQY";
+$database = "zHZ3KKAmaN";
