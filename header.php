@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Headgum | Script Archive</title>
+		<title>HeadGum | Script Archive</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 		<!-- Fonts -->
 		<link href="/fonts/fonts.css" rel="stylesheet">
