@@ -21,8 +21,8 @@
 		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 		
-		  //ga('create', 'UA-42563448-1', 'infinitejest.x10host.com');
-		  //ga('send', 'pageview');
+		  ga('create', 'UA-136261292-1', 'infinitejest.x10host.com');
+		  ga('send', 'pageview');
 		
 		</script>
 	</head>

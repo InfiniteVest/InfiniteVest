@@ -7,7 +7,7 @@
 			  echo "Failed to connect to MySQL: " . mysqli_connect_error();
 			}
 			
-			$query = "SELECT * FROM episodes";
+			$query = "SELECT * FROM ja_headgum";
 			
 			$result = mysqli_query($con, $query);
 

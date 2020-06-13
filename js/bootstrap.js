@@ -23,9 +23,6 @@
   /* CUSTOM JS (http://www.garrettboatman.com/)
    * ======================================================= */
 
-   
-   
-
 
    /* Enables Mobile Device touch hover */
    document.addEventListener("touchstart", function(){}, true);
@@ -37,16 +34,16 @@
        
    //Used for Dropdown Toggle animation. Actual animation handled within CSS
    $('.episode-item-header').click(function(){	   
-	  $(this).parent().toggleClass('opened closed');
-	  var accordion = $(this).parent().children('.episode-item-content');
-	  accordion.height('auto');
-	  var accordionHeight = accordion.height();
-	  accordion.height(accordionHeight);
-	  
-	  
-	  // Initialized iframe src attribute on selection of episode
-	  var iframe = $(this).parent().find(".episode-video-inner iframe");
-	  iframe.attr("src", iframe.data('src'));
+	   $(this).parent().toggleClass('opened closed');
+	   var accordion = $(this).parent().children('.episode-item-content');
+	   accordion.height('auto');
+	   var accordionHeight = accordion.height();
+	   accordion.height(accordionHeight);
+	   
+	   
+	   // Initialized iframe src attribute on selection of episode
+	   var iframe = $(this).parent().find(".episode-video-inner iframe");
+	   iframe.attr("src", iframe.data('src'));
    });
    
   
@@ -59,7 +56,7 @@
    
    
    $('.script-button').click(function(){
-	  $(this).closest('.episode-item').toggleClass('scripted unscripted');
+	   $(this).closest('.episode-item').toggleClass('scripted unscripted');
 	  var script =  $(this).closest('.episode-item-content').find('.episode-script');
 	  script.height('auto');
 	  var scriptHeight = script.height();
@@ -69,6 +66,20 @@
    
    
    /* Advanced Options & Datepicker JS */
+	$(document).ready(function(){
+  	var radios = document.getElementsByName("option");
+  	var val = sessionStorage.getItem('option');
+  	for(var i=0;i<radios.length;i++){
+    if(radios[i].value == val){
+	radios[i].checked = true;
+										}
+										}
+	$('input[name="option"]').on('change', function(){
+		sessionStorage.setItem('option', $(this).val());
+  
+	});
+	});
+
 	$('#range-start').datepicker({format: 'mm-dd-yyyy'});
 	$('#range-end').datepicker({format: 'mm-dd-yyyy'});
 	

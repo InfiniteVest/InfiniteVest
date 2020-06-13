@@ -3,14 +3,22 @@
 			<div class="container">
 				<div class="row-fluid">
 					<div class="results-wrapper span12">
-						<span class="results-number"><!-- TODO: Results --></span> Searched : 
+						<span class="results-number"><!-- TODO: Results --></span> Searched : <br> 
 						<span class="search-string">
 							<?php printSearchTerms(array_unique($search)); echo $searchErr ?>
 						</span>
 						<span class="advanced-info">
 						<?php
-						if(!empty($exactPhrase)) echo 'Exact phrase';
-						if(!empty($titleOnly)) echo "Title only <br>";  
+	$selected = $_GET['option'];
+						if($selected == "headgum") {
+							echo '<br>HeadGum Scripts';
+						} else if($selected == "jaonly") {
+							echo '<br>J&A Scripts';
+						} else {
+							echo '<br>Both HeadGum and J&A Scripts';
+						}
+						if(!empty($exactPhrase)) echo ', Exact phrase';
+						if(!empty($titleOnly)) echo ", Title only <br>";  
 						if(!empty($fromDate) && !empty($toDate)) echo 'Between ' . $fromDate . ' and ' . $toDate .'<br>';
 						?>
 						</span>
@@ -43,22 +51,36 @@
                 $search = array();
                 array_push($search, $exactString);
 							}
+								
 							
-							// Create query for single episode
-							if(isset($_GET['single-episode']) && isset($_GET['single-id'])) {								
+									// Create query for single episode
+							if(isset($_GET['single-episode']) && isset($_GET['single-id']))	
+							{
 								$singleId = $_GET['single-id'];
-								$fullQuery = "SELECT * FROM episodes WHERE id=" . $singleId . ";";
-							} 
-							
+								if($selected == "headgum") {
+								   $fullQuery = "SELECT * FROM episodes WHERE id=" . $singleId . ";";
+								} else if($selected == "jaonly") {
+								   $fullQuery = "SELECT * FROM ja_episodes WHERE id=" . $singleId . ";";
+								}
+								else {
+    								$fullQuery = "SELECT * FROM ja_headgum WHERE id=" . $singleId . ";";
+							}
+								   }
 							// Create query for search
 							else {														
 								// Build the title search terms
-								$titleQuery = "SELECT * from episodes WHERE ((";
+								if($selected == "headgum") {
+								$titleQuery = "SELECT * FROM episodes WHERE((";
+									} else if($selected == "jaonly") {
+								$titleQuery = "SELECT * FROM ja_episodes WHERE((";
+								}else{
+									$titleQuery = "SELECT * FROM ja_headgum WHERE ((";
+									  }
 								$scriptQuery = "";							
                					$dateQuery = "";
                					$orderBy = "ORDER BY air_date ASC"; //by default sort by air date
 								$searchLength = count($search);
-							
+								
 								//set default sort button values
 								$newSortTypeTitle = "title-desc";
 								$newSortTypeAirDate = "air-date-asc";
@@ -173,7 +195,8 @@
 					<div class="episodes-wrapper span12">	
 							<?php
 							//execute the SQL query and return records
-							$result = mysqli_query($con, $fullQuery);
+							$result = mysqli_query($con, $fullQuery);										   
+						
 						?>
 						
 						

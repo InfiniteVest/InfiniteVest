@@ -129,7 +129,7 @@ body{
 
 #header_wrapper{
 	width: 100%;
-	background-color: #d0d1d6;
+	background-color: #fa4f67;
 	background-image: url('../img/jakeamir-bg.png');
 	background-size: 900px;
 	background-position: center bottom;
@@ -162,11 +162,16 @@ body{
 
 /* Search Field */
 
-.search-wrapper{
-	margin-top: 160px;
-	position: relative;
+.options-wrapper{
+	margin-bottom: 10px;
+	position: absolute;
 }
 
+.search-wrapper{
+	margin-top: 140px;
+	position: relative;
+}
+	
 .search-wrapper form{text-align: center;}
 
 #search-terms-bar{
@@ -199,7 +204,7 @@ body{
 	height: 50px !important;
 	position: absolute;
 	right: 15px;
-	top:5px;
+	top:40px;
 	transition: color .2s;
 	-moz-transition: color .2s; /* Firefox 4 */
 	-webkit-transition: color .2s; /* Safari and Chrome */
@@ -208,12 +213,9 @@ body{
 	border: none; 
 	margin: 0; 
 	padding: 0; 
-	font-size: 0; 
-	line-height: 0; 
-	width: auto; 
-	overflow: visible;
+	line-height: 0;  
 	font-size: 45px;
-	color: #636367;
+	color: #3e536d;
 	text-shadow: -2px 2px 0px rgba(150, 150, 150, 0.52);
 	overflow: visible !important;
 }
@@ -224,7 +226,7 @@ body{
 		text-shadow: -2px 2px 0px rgba(150, 150, 150, 0);}
 
 .search-button:hover{
-	color: #ff9c00;
+	color: #23966d;
 }
 
 
@@ -292,10 +294,28 @@ input[type=checkbox] + label{
 	font-family: 'Futura-Book';
 }
 
+input[type=radio]{display: none;}
+input[type=radio] + label{
+	padding-left: 27px;
+	padding-bottom: 3px;
+	background: url('../img/ja-checkbox-sprite-6.png');
+	background-repeat: no-repeat;
+	background-size: 22px;
+	color: #fff;
+	text-shadow: 1px 1px 0 rgba(0,0,0,.42);
+	margin-right: 15px;
+	font-family: 'Futura-Book';
+}
+
 /* Retina Styled Checkboxes */
 input[type=checkbox] + label{background-position: 0px -58px;}
 input[type=checkbox]:checked + label{background-position: 0px -106px;}
 input[type=checkbox] + label:active{background-position: 0px -83px;}
+
+input[type=radio] + label{background-position: 0px -58px;}
+input[type=radio]:checked + label{background-position: 0px -106px;}
+input[type=radio] + label:active{background-position: 0px -83px;}
+
 
 input::-webkit-input-placeholder {color: #d2d2d2;line-height: 1.1em;}
 input:-moz-placeholder { /* Firefox 18- */color: #d2d2d2; }
@@ -319,6 +339,7 @@ input:-ms-input-placeholder {  color: #d2d2d2;  }
 	color: #636363;
 	font-family: 'bebas_neueregular';
 	word-spacing: 5px;
+	word-wrap: break-word;
 }
 
 .search-string{
@@ -774,16 +795,22 @@ input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
 }
-label,
 select,
+label,
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
-input[type="radio"],
 input[type="checkbox"] {
   cursor: pointer;
 }
+
+label,
+input[type="radio"] {
+	cursor: text;
+}
+
+
 input[type="search"] {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -1113,6 +1140,10 @@ a:focus {
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
   width: 940px;
+}
+
+.span13 {
+	margin-bottom: 5px;
 }
 .span12 {
   width: 940px;
@@ -3021,4 +3052,3 @@ display: inherit !important;
     margin-left: 0;
   }
 }
-

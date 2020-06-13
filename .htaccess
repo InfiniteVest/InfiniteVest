@@ -1,0 +1,6 @@
+Header set Cache-Control "max-age=0, private, no-cache, no-store, must-revalidate"
+# Turn off mod_security filtering.
+<IfModule mod_security.c>
+SecFilterEngine Off
+SecFilterScanPOST Off
+</IfModule>
